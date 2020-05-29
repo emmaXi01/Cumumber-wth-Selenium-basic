@@ -1,0 +1,168 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3638888227,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.InitializeTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with correct username and password",
+        "description": "",
+        "id": "lginfeature;login-with-correct-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 102843,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.TearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 417763823,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the Login page",
+            "match": {
+              "location": "LoginStep.iNavigateToTheLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1055350,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 6,
+                "value": "#    And I enter the username as \"admin\" and password as \"admin\""
+              }
+            ],
+            "line": 7,
+            "name": "I enter the users email address as Email:admin",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 41
+                }
+              ],
+              "location": "LoginStep.iEnterTheUsersEmailAddressAsEmailAdmin(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 421866,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify the count of my salary digits for Rs 1000000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000000",
+                  "offset": 46
+                }
+              ],
+              "location": "LoginStep.iVerifyTheCountOfMySalaryDigitsForRs(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 336228,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I just need to see how step looks for Cucumber-Java8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 51
+                }
+              ],
+              "location": "Java8VersionSteps.java:7"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 156416340,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "admin",
+                  "adminpassword"
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22660956,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click login button",
+            "match": {
+              "location": "LoginStep.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 628546138,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "LoginStep.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "LginFeature",
+    "description": "This feature deals with the login functionality of the application",
+    "id": "lginfeature",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]

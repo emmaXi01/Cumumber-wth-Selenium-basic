@@ -1,7 +1,7 @@
 Transformation/SalaryCountTransformer.class
 Base/BaseUtil.class
-Transformation/EmailTransformation.class
 Steps/Java8VersionSteps.class
+Transformation/EmailTransformer.class
 Steps/LoginStep.class
 Steps/User.class
 Pages/LoginPage.class

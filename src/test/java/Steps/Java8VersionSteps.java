@@ -1,6 +1,6 @@
 package Steps;
 
-import cucumber.api.java8.En;
+import io.cucumber.java8.En;
 
 public class Java8VersionSteps implements En {
     public Java8VersionSteps() {
@@ -8,4 +8,5 @@ public class Java8VersionSteps implements En {
             System.out.println("The value from step class is " + arg0);
         });
     }
+
 }

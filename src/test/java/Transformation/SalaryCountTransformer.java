@@ -1,8 +1,9 @@
 package Transformation;
 
-import cucumber.api.Transformer;
 
-public class SalaryCountTransformer extends Transformer<Integer> {
+import io.cucumber.cucumberexpressions.Transformer;
+
+public class SalaryCountTransformer implements Transformer<Integer> {
 
     @Override
     public Integer transform(String salary ) {

@@ -2,13 +2,10 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.LoginPage;
-import Transformation.EmailTransformation;
-import Transformation.SalaryCountTransformer;
-import cucumber.api.DataTable;
-import cucumber.api.Transform;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,15 +35,28 @@ public class LoginStep extends BaseUtil {
 //    }
     @And("I enter the following for Login")
     public void iEnterTheFollowingForLogin(DataTable dataTable) {
-        List<User> users = dataTable.asList(User.class);
+        /**
+         * use info.cukes dependency
+         */
+//        List<User> users = dataTable.asList(User.class);
+//        List<User> users = dataTable.asList(String.class);
+//        LoginPage page = new LoginPage(base.driver);
+//        for(User user : users) {
+////            base.driver.findElement(By.name("UserName")).sendKeys(user.getUsername());
+////            base.driver.findElement(By.name("Password")).sendKeys(user.getPassword());
+//            //page object model
+//            page.Login(user.getUsername(), user.getPassword());
+//
+//        }
+        /**
+         * cucumber 6
+         */
+        List<List<String>> users = dataTable.asLists(String.class);
         LoginPage page = new LoginPage(base.driver);
-        for(User user : users) {
-//            base.driver.findElement(By.name("UserName")).sendKeys(user.getUsername());
-//            base.driver.findElement(By.name("Password")).sendKeys(user.getPassword());
-            //page object model
-            page.Login(user.getUsername(), user.getPassword());
-
-        }
+       for(List<String> userList: users) {
+           User user = new User(userList.get(0), userList.get(1));
+           page.Login(user.getUsername(), user.getPassword());
+       }
     }
 
     @And("I click login button")
@@ -73,14 +83,16 @@ public class LoginStep extends BaseUtil {
         System.out.println(password);
     }
 
-    @And("^I enter the users email address as Email:([^\"]*)$")
-    public void iEnterTheUsersEmailAddressAsEmailAdmin(@Transform(EmailTransformation.class) String email) {
-        System.out.println("The email adddress is " + email);
 
-    }
 
-    @And("^I verify the count of my salary digits for Rs (\\d+)$")
-    public void iVerifyTheCountOfMySalaryDigitsForRs(@Transform(SalaryCountTransformer.class) int salary) {
-        System.out.println("My salary digits count is " + salary);
-    }
+//    @And("^I enter the users email address as Email:([^\"]*)$")
+//    public void iEnterTheUsersEmailAddressAsEmailAdmin(@Transform(EmailTransformation.class) String email) {
+//        System.out.println("The email adddress is " + email);
+//
+//    }
+//
+//    @And("^I verify the count of my salary digits for Rs (\\d+)$")
+//    public void iVerifyTheCountOfMySalaryDigitsForRs(@Transform(SalaryCountTransformer.class) int salary) {
+//        System.out.println("My salary digits count is " + salary);
+//    }
 }

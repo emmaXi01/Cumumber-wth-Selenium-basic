@@ -3,14 +3,15 @@
     "line": 1,
     "elements": [
       {
+        "start_timestamp": "2020-05-30T20:20:45.063Z",
         "before": [
           {
             "result": {
-              "duration": 3638888227,
+              "duration": 2654000000,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.InitializeTest()"
+              "location": "Steps.Hook.InitializeTest()"
             }
           }
         ],
@@ -21,11 +22,11 @@
         "after": [
           {
             "result": {
-              "duration": 102843,
+              "duration": 1000000,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.TearDownTest(Scenario)"
+              "location": "Steps.Hook.TearDownTest(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -34,61 +35,19 @@
         "steps": [
           {
             "result": {
-              "duration": 417763823,
+              "duration": 446000000,
               "status": "passed"
             },
             "line": 5,
             "name": "I navigate to the Login page",
             "match": {
-              "location": "LoginStep.iNavigateToTheLoginPage()"
+              "location": "Steps.LoginStep.iNavigateToTheLoginPage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1055350,
-              "status": "passed"
-            },
-            "comments": [
-              {
-                "line": 6,
-                "value": "#    And I enter the username as \"admin\" and password as \"admin\""
-              }
-            ],
-            "line": 7,
-            "name": "I enter the users email address as Email:admin",
-            "match": {
-              "arguments": [
-                {
-                  "val": "admin",
-                  "offset": 41
-                }
-              ],
-              "location": "LoginStep.iEnterTheUsersEmailAddressAsEmailAdmin(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 421866,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I verify the count of my salary digits for Rs 1000000",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1000000",
-                  "offset": 46
-                }
-              ],
-              "location": "LoginStep.iVerifyTheCountOfMySalaryDigitsForRs(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 336228,
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 9,
@@ -100,59 +59,57 @@
                   "offset": 51
                 }
               ],
-              "location": "Java8VersionSteps.java:7"
+              "location": "Steps.Java8VersionSteps.\u003cinit\u003e(Java8VersionSteps.java:7)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 156416340,
+              "duration": 178000000,
               "status": "passed"
             },
             "line": 10,
             "name": "I enter the following for Login",
             "match": {
-              "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
+              "location": "Steps.LoginStep.iEnterTheFollowingForLogin(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
                   "username",
                   "password"
-                ],
-                "line": 11
+                ]
               },
               {
                 "cells": [
                   "admin",
                   "adminpassword"
-                ],
-                "line": 12
+                ]
               }
             ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 22660956,
+              "duration": 24000000,
               "status": "passed"
             },
             "line": 13,
             "name": "I click login button",
             "match": {
-              "location": "LoginStep.iClickLoginButton()"
+              "location": "Steps.LoginStep.iClickLoginButton()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 628546138,
+              "duration": 625000000,
               "status": "passed"
             },
             "line": 14,
             "name": "I should see the userform page",
             "match": {
-              "location": "LoginStep.iShouldSeeTheUserformPage()"
+              "location": "Steps.LoginStep.iShouldSeeTheUserformPage()"
             },
             "keyword": "Then "
           }
@@ -160,9 +117,10 @@
       }
     ],
     "name": "LginFeature",
-    "description": "This feature deals with the login functionality of the application",
+    "description": "  This feature deals with the login functionality of the application",
     "id": "lginfeature",
     "keyword": "Feature",
-    "uri": "Login.feature"
+    "uri": "file:src/test/java/Features/Login.feature",
+    "tags": []
   }
 ]

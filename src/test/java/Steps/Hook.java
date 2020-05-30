@@ -1,10 +1,12 @@
 package Steps;
 
 import Base.BaseUtil;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Hook extends BaseUtil{
